@@ -1,11 +1,37 @@
 [alias]
-  co = checkout
-  ci = commit
-  st = status
-  br = branch
-  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
+	br = branch -vv
+	bra = branch -vv --all
+	co = checkout
+	ci = commit
+	ca = commit --amend
+	cc = rev-list HEAD --count   ; count commits on current branch
+	cca = rev-list --all --count ; count all commits
+	di = diff
+	dis = diff --stat
+	diw = diff --color-words
+	dc = diff --cached
+	dcs = diff --cached --stat
+	dcw = diff --cached --color-words
+	dh = diff HEAD~
+	dhs = diff HEAD~ --stat
+	dhw = diff HEAD~ --color-words
+	ff = merge --ff-only
+	noff = merge --no-ff
+	st = status -sb
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	gr = log --graph --format=compact # graph
+	grl = log --graph --format=line # graph line
+	grd = log --graph --format=detail # graph detail
+	gra = log --graph --format=compact --all # graph all
+	gral = log --graph --format=line --all # graph all line
+	grad = log --graph --format=detail --all # graph all in detail
+	type = cat-file -t
+	dump = cat-file -p
+
+[pretty]
+	line = "%C(auto)%h%d %s %C(yellow)by %C(blue)%an %C(green)%ar"
+	compact = "%C(auto)%h %s %C(green)%ar%n %C(auto)%d%n"
+	detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ar%n %C(auto)%d%n"
 
 [include]
-  path = ~/.gitconfig_local
+	path = ~/.gitconfig_local
