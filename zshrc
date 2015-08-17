@@ -67,6 +67,18 @@ alias -s adoc=vim
 eval `dircolors ~/dotfiles/dircolors-solarized/dircolors.ansi-dark`
 export EDITOR=vim
 
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias ls="ls --color=auto"
+
+if command -v colordiff > /dev/null 2>&1; then
+    alias diff="colordiff -Nuar"
+else
+    alias diff="diff -Nuar"
+fi
+
 #export LESS=-R
 #export LESS_TERMCAP_me=[0m
 #export LESS_TERMCAP_se=[0m
