@@ -1,0 +1,5 @@
+== Fun ANSI color scripts
+
+Just some scripts from the Arch Wiki
+
+https://wiki.archlinux.org/index.php/X_resources#Color_scheme_scripts
