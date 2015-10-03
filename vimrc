@@ -16,12 +16,13 @@ set showmatch " show matching braces when text indicator is over them
 " vim can autodetect this based on $TERM (e.g. 'xterm-256color')
 " but it can be set to force 256 colors
 " set t_Co=256
+set background=dark
 if &t_Co < 256
-    colorscheme desert
+    colorscheme solarized
     set nocursorline " looks bad in this mode
 else
-    set background=dark
-    let g:solarized_termcolors=256 " instead of 16 color with mapping in terminal
+    "colors don't look right if next line uncommented
+    "let g:solarized_termcolors=256 " instead of 16 color with mapping in terminal
     colorscheme solarized
     " customized colors
     highlight SignColumn ctermbg=234
@@ -38,11 +39,16 @@ else
 endif
 
 if has('gui_running')
-  colorscheme solarized
   set lines=65
   set columns=90
-else
-  colorscheme desert
+endif
+
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
 endif
 
 filetype plugin indent on " enable file type detection
@@ -90,7 +96,7 @@ nnoremap <leader>tc :tabclose<cr>
 " Misc configurations
 "--------------------
 
-autocmd BufNewFile,BufRead *.adoc setlocal filetype=adoc
+autocmd BufNewFile,BufRead *.adoc,*.asciidoc setlocal filetype=adoc
 
 "---------------------
 " Plugin configuration
