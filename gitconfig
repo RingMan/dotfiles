@@ -17,6 +17,7 @@
 	dhw = diff HEAD~ --color-words
 	ff = merge --ff-only
 	noff = merge --no-ff
+	fo = fetch origin
 	st = status -sb
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	gr = log --graph --format=compact # graph
