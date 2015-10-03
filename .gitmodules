@@ -37,3 +37,6 @@
 [submodule "vim/bundle/sahara"]
 	path = vim/bundle/sahara
 	url = https://github.com/tejr/sahara.git
+[submodule "vim/bundle/vim-fireplace"]
+	path = vim/bundle/vim-fireplace
+	url = https://github.com/tpope/vim-fireplace.git
