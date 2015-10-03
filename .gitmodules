@@ -34,3 +34,6 @@
 [submodule "vim/bundle/vim-sexp-mappings-for-regular-people"]
 	path = vim/bundle/vim-sexp-mappings-for-regular-people
 	url = https://github.com/RingMan/vim-sexp-mappings-for-regular-people.git
+[submodule "vim/bundle/sahara"]
+	path = vim/bundle/sahara
+	url = https://github.com/tejr/sahara.git
