@@ -79,6 +79,10 @@ else
     alias diff="diff -Nuar"
 fi
 
+# Disable software flow control (Ctrl+S) and (Ctrl+Q)
+# to avoid accidentally 'freezing' the terminal
+stty -ixon
+
 #export LESS=-R
 #export LESS_TERMCAP_me=[0m
 #export LESS_TERMCAP_se=[0m
