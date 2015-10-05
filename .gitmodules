@@ -40,3 +40,6 @@
 [submodule "vim/bundle/vim-fireplace"]
 	path = vim/bundle/vim-fireplace
 	url = https://github.com/tpope/vim-fireplace.git
+[submodule "mintty-colors-solarized"]
+	path = mintty-colors-solarized
+	url = https://github.com/mavnn/mintty-colors-solarized.git
