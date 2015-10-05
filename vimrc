@@ -74,7 +74,7 @@ set shiftwidth=2
 set softtabstop=2
 
 set mouse+=a " enable mouse mode (scrolling, selection, etc)
-if &term =~ '^screen'
+if &term =~ '^screen' || has('win32unix')
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
 endif
