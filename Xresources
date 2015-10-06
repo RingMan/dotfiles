@@ -1,4 +1,5 @@
-URxvt*scaleHeight: 1.2
+URxvt*scrollBar: false
+URxvt*lineSpace: 1
 URxvt*font:           xft:Droid Sans Mono:pixelsize=14:antialias=true:hinting=true
 URxvt*boldFont:       xft:Droid Sans Mono:bold:pixelsize=14:antialias=true:hinting=true
 URxvt*italicFont:     xft:Droid Sans Mono:italic:pixelsize=14:antialias=true:hinting=true
